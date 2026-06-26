@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paper_white"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/comb_n"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/comb_r"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/btnNpr" style="@style/Widget.TifeCalculator.Button.Accent" android:text="@string/comb_npr" android:layout_weight="1" android:layout_width="0dp" android:layout_height="52dp" />
+        <Button android:id="@+id/btnNcr" style="@style/Widget.TifeCalculator.Button.Accent" android:text="@string/comb_ncr" android:layout_weight="1" android:layout_width="0dp" android:layout_height="52dp" />
+        <Button android:id="@+id/btnFactorial" style="@style/Widget.TifeCalculator.Button.Main" android:text="@string/comb_fact" android:layout_weight="1" android:layout_width="0dp" android:layout_height="52dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCombOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/surface"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="@string/result_placeholder"
+        android:textColor="@color/ink_black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="button_margin">4dp</dimen>
-    <dimen name="button_height">64dp</dimen>
-    <dimen name="text_size_input">40sp</dimen>
-    <dimen name="text_size_result">24sp</dimen>
+    <dimen name="button_height">60dp</dimen>
+    <dimen name="key_radius">14dp</dimen>
+    <dimen name="text_size_input">22sp</dimen>
+    <dimen name="text_size_result">44sp</dimen>
+    <dimen name="text_size_key">20sp</dimen>
     <dimen name="display_padding">16dp</dimen>
+    <dimen name="screen_padding">12dp</dimen>
 </resources>

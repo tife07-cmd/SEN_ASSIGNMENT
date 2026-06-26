@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Tife ScienticCalculator</string>
+    <string name="app_name">Tife</string>
+    <string name="nav_header_subtitle">Engineering calculator</string>
+
     <string name="btn_0">0</string>
     <string name="btn_1">1</string>
     <string name="btn_2">2</string>
@@ -18,28 +20,57 @@
     <string name="btn_equal">=</string>
     <string name="btn_ac">AC</string>
     <string name="btn_del">DEL</string>
+
     <string name="btn_sin">sin</string>
     <string name="btn_cos">cos</string>
     <string name="btn_tan">tan</string>
+    <string name="btn_asin">asin</string>
+    <string name="btn_acos">acos</string>
+    <string name="btn_atan">atan</string>
     <string name="btn_sinh">sinh</string>
     <string name="btn_cosh">cosh</string>
+    <string name="btn_tanh">tanh</string>
     <string name="btn_log">log</string>
     <string name="btn_ln">ln</string>
     <string name="btn_sqrt">√</string>
+    <string name="btn_exp">exp</string>
     <string name="btn_power">^</string>
-    <string name="btn_fact">x!</string>
-    <string name="btn_ncr">nCr</string>
-    <string name="btn_npr">nPr</string>
+    <string name="btn_fact">!</string>
+    <string name="btn_pi">π</string>
+    <string name="btn_e">e</string>
     <string name="btn_open_brac">(</string>
     <string name="btn_close_brac">)</string>
-    <string name="title_scientific">Scientific</string>
-    <string name="desc_theme_toggle">Toggle dark mode</string>
-    <string name="evaluating_prefix">Evaluating: </string>
+    <string name="btn_deg">DEG</string>
+    <string name="btn_rad">RAD</string>
+
     <string name="error_msg">Error</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_basic">Basic Calculator</string>
+
+    <string name="nav_basic">Basic</string>
+    <string name="title_scientific">Scientific</string>
     <string name="nav_matrix">Matrix</string>
-    <string name="nav_combinatorics">Combinatorics</string>
+    <string name="nav_combinatorics">Permutations &amp; Combinations</string>
     <string name="nav_statistics">Statistics</string>
+
+    <string name="matrix_size">Size</string>
+    <string name="matrix_a">Matrix A</string>
+    <string name="matrix_b">Matrix B</string>
+    <string name="matrix_add">A + B</string>
+    <string name="matrix_sub">A − B</string>
+    <string name="matrix_mul">A × B</string>
+    <string name="matrix_det">det A</string>
+    <string name="matrix_inv">A⁻¹</string>
+    <string name="matrix_transpose">Aᵀ</string>
+
+    <string name="comb_n">n</string>
+    <string name="comb_r">r</string>
+    <string name="comb_npr">nPr</string>
+    <string name="comb_ncr">nCr</string>
+    <string name="comb_fact">n!</string>
+
+    <string name="stats_hint">Enter values separated by commas or spaces</string>
+    <string name="stats_compute">Compute</string>
+
+    <string name="result_placeholder">—</string>
 </resources>

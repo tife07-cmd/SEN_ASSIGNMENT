@@ -8,54 +8,48 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.tife.tifescienticcalculator.R
+import com.tife.tifescienticcalculator.feature.common.Keypad
 
 class BasicFragment : Fragment() {
 
-    private lateinit var tvInput: TextView
-    private lateinit var tvResult: TextView
-    private var input: String = ""
+    private lateinit var keypad: Keypad
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val view = inflater.inflate(R.layout.fragment_basic, container, false)
 
-        tvInput = view.findViewById(R.id.tvInput)
-        tvResult = view.findViewById(R.id.tvResult)
-
-        val buttons = listOf(
-            R.id.btn0, R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4,
-            R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8, R.id.btn9,
-            R.id.btnDot, R.id.btnAdd, R.id.btnSub, R.id.btnMul, R.id.btnDiv,
-            R.id.btnOpenBrac
+        keypad = Keypad(
+            view.findViewById<TextView>(R.id.tvInput),
+            view.findViewById<TextView>(R.id.tvResult)
         )
 
-        for (id in buttons) {
-            view.findViewById<Button>(id).setOnClickListener {
-                val button = it as Button
-                input += button.text.toString()
-                tvInput.text = input
-            }
+        val tokens = mapOf(
+            R.id.btn0 to "0", R.id.btn1 to "1", R.id.btn2 to "2", R.id.btn3 to "3",
+            R.id.btn4 to "4", R.id.btn5 to "5", R.id.btn6 to "6", R.id.btn7 to "7",
+            R.id.btn8 to "8", R.id.btn9 to "9", R.id.btnDot to ".",
+            R.id.btnAdd to "+", R.id.btnSub to "-", R.id.btnMul to "*", R.id.btnDiv to "/",
+            R.id.btnOpenBrac to "(", R.id.btnCloseBrac to ")"
+        )
+        for ((id, token) in tokens) {
+            view.findViewById<Button>(id).setOnClickListener { keypad.append(token) }
         }
 
-        view.findViewById<Button>(R.id.btnAC).setOnClickListener {
-            input = ""
-            tvInput.text = getString(R.string.btn_0)
-            tvResult.text = ""
-        }
+        view.findViewById<Button>(R.id.btnEqual).setOnClickListener { keypad.evaluate() }
+        view.findViewById<Button>(R.id.btnAC).setOnClickListener { keypad.clear() }
+        view.findViewById<Button>(R.id.btnDel).setOnClickListener { keypad.backspace() }
 
-        view.findViewById<Button>(R.id.btnDel).setOnClickListener {
-            if (input.isNotEmpty()) {
-                input = input.substring(0, input.length - 1)
-                tvInput.text = input.ifEmpty { getString(R.string.btn_0) }
-            }
-        }
-
-        view.findViewById<Button>(R.id.btnEqual).setOnClickListener {
-            tvResult.text = input // Simplified for now
-        }
-
+        savedInstanceState?.getString(KEY_EXPR)?.let { keypad.restore(it) }
         return view
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        if (::keypad.isInitialized) outState.putString(KEY_EXPR, keypad.expr)
+    }
+
+    companion object {
+        private const val KEY_EXPR = "basic_expr"
     }
 }
