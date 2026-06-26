@@ -49,39 +49,38 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:columnCount="4"
-                android:rowCount="5">
+                android:columnCount="5"
+                android:rowCount="4">
 
-                <Button android:id="@+id/btnOpenBrac" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_open_brac" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnCloseBrac" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_close_brac" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnPow" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_power" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnFact" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_fact" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
+                <Button android:id="@+id/btnSin" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_sin" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnCos" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_cos" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnTan" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_tan" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnAsin" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_asin" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnAcos" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_acos" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
 
-                <Button android:id="@+id/btnSin" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_sin" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnCos" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_cos" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnTan" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_tan" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnSqrt" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_sqrt" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
+                <Button android:id="@+id/btnAtan" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_atan" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnSinh" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_sinh" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnCosh" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_cosh" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnTanh" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_tanh" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnPow" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_power" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
 
-                <Button android:id="@+id/btnAsin" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_asin" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnAcos" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_acos" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnAtan" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_atan" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnExp" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_exp" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
+                <Button android:id="@+id/btnLn" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_ln" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnLog" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_log" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnSqrt" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_sqrt" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnExp" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_exp" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnFact" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_fact" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
 
-                <Button android:id="@+id/btnSinh" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_sinh" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnCosh" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_cosh" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnTanh" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_tanh" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnPi" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_pi" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-
-                <Button android:id="@+id/btnLn" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_ln" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnLog" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_log" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnE" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_e" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
-                <Button android:id="@+id/btnDeg" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_rad" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="48dp" />
+                <Button android:id="@+id/btnPerm" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_perm" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnComb" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_comb" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnPi" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_pi" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnE" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_e" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
+                <Button android:id="@+id/btnDeg" style="@style/Widget.TifeCalculator.Function" android:text="@string/btn_rad" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="46dp" />
 
             </GridLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="6dp" />
+                android:layout_height="8dp" />
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -89,8 +88,10 @@
                 android:columnCount="4"
                 android:rowCount="5">
 
-                <Button android:id="@+id/btnAC" style="@style/Widget.TifeCalculator.Button.Main" android:text="@string/btn_ac" android:layout_columnWeight="1" android:layout_columnSpan="2" android:layout_width="0dp" android:layout_height="54dp" />
-                <Button android:id="@+id/btnDel" style="@style/Widget.TifeCalculator.Button.Main" android:text="@string/btn_del" android:layout_columnWeight="1" android:layout_columnSpan="2" android:layout_width="0dp" android:layout_height="54dp" />
+                <Button android:id="@+id/btnAC" style="@style/Widget.TifeCalculator.Button.Main" android:text="@string/btn_ac" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="54dp" />
+                <Button android:id="@+id/btnDel" style="@style/Widget.TifeCalculator.Button.Main" android:text="@string/btn_del" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="54dp" />
+                <Button android:id="@+id/btnOpenBrac" style="@style/Widget.TifeCalculator.Button.Main" android:text="@string/btn_open_brac" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="54dp" />
+                <Button android:id="@+id/btnCloseBrac" style="@style/Widget.TifeCalculator.Button.Main" android:text="@string/btn_close_brac" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="54dp" />
 
                 <Button android:id="@+id/btn7" style="@style/Widget.TifeCalculator.Button.Main" android:text="@string/btn_7" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="54dp" />
                 <Button android:id="@+id/btn8" style="@style/Widget.TifeCalculator.Button.Main" android:text="@string/btn_8" android:layout_columnWeight="1" android:layout_width="0dp" android:layout_height="54dp" />

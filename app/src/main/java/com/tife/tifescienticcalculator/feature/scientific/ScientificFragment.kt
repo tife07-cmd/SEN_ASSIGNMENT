@@ -39,7 +39,8 @@ class ScientificFragment : Fragment() {
             R.id.btnAsin to "asin(", R.id.btnAcos to "acos(", R.id.btnAtan to "atan(",
             R.id.btnSinh to "sinh(", R.id.btnCosh to "cosh(", R.id.btnTanh to "tanh(",
             R.id.btnLn to "ln(", R.id.btnLog to "log(", R.id.btnSqrt to "sqrt(",
-            R.id.btnExp to "exp(", R.id.btnPi to "pi", R.id.btnE to "e"
+            R.id.btnExp to "exp(", R.id.btnPi to "pi", R.id.btnE to "e",
+            R.id.btnPerm to "P", R.id.btnComb to "C"
         )
         for ((id, token) in tokens) {
             view.findViewById<Button>(id).setOnClickListener { keypad.append(token) }

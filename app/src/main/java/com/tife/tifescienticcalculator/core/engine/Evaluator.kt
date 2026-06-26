@@ -1,5 +1,6 @@
 package com.tife.tifescienticcalculator.core.engine
 
+import com.tife.tifescienticcalculator.core.math.Combinatorics
 import com.tife.tifescienticcalculator.core.math.Scientific
 import kotlin.math.*
 
@@ -36,7 +37,14 @@ class Evaluator(private val angleMode: AngleMode = AngleMode.RADIANS) {
         "*" -> a * b
         "/" -> if (b == 0.0) throw CalcException("Division by zero") else a / b
         "^" -> a.pow(b)
+        "P" -> Combinatorics.permutations(toCount(a), toCount(b)).toDouble()
+        "C" -> Combinatorics.combinations(toCount(a), toCount(b)).toDouble()
         else -> throw CalcException("Unknown operator $op")
+    }
+
+    private fun toCount(x: Double): Int {
+        if (x != floor(x)) throw CalcException("nPr and nCr need whole numbers")
+        return x.toInt()
     }
 
     private fun applyFunction(name: String, x: Double): Double {
