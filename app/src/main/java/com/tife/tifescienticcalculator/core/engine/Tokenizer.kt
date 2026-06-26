@@ -20,6 +20,9 @@ class Tokenizer {
                     while (i < s.length && (s[i].isDigit() || s[i] == '.')) i++
                     tokens += Token(TokenType.NUMBER, s.substring(start, i))
                 }
+                // uppercase P and C are the nPr / nCr binary operators; check before the
+                // letter branch since they would otherwise be read as function names
+                c == 'P' || c == 'C' -> { tokens += Token(TokenType.OPERATOR, c.toString()); i++ }
                 c.isLetter() -> {
                     val start = i
                     while (i < s.length && s[i].isLetter()) i++

@@ -47,7 +47,7 @@ class Keypad(
     fun evaluate() {
         if (expr.isBlank()) return
         resultView.text = try {
-            NumberFormatter.format(calculator.evaluate(expr))
+            NumberFormatter.format(calculator.evaluate(balanced(expr)))
         } catch (e: Exception) {
             e.message ?: "Error"
         }
@@ -65,11 +65,17 @@ class Keypad(
             return
         }
         // a half-typed expression is normal mid-edit, so a failed preview just stays silent
-        runCatching { resultView.text = NumberFormatter.format(calculator.evaluate(expr)) }
+        runCatching { resultView.text = NumberFormatter.format(calculator.evaluate(balanced(expr))) }
     }
 
     private fun render() {
         inputView.text = prettify(expr)
+    }
+
+    // closing brackets are optional: a trailing "sin(5" evaluates as "sin(5)"
+    private fun balanced(s: String): String {
+        val open = s.count { it == '(' } - s.count { it == ')' }
+        return if (open > 0) s + ")".repeat(open) else s
     }
 
     private fun prettify(s: String): String = s
@@ -78,6 +84,8 @@ class Keypad(
         .replace("*", "×")
         .replace("/", "÷")
         .replace("-", "−")
+        .replace("P", " P ")
+        .replace("C", " C ")
 
     // a function token ("sin(") or constant ("pi") must be removed whole, not letter by letter
     private fun dropLastToken(s: String): String {

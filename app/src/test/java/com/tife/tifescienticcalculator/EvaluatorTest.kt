@@ -19,4 +19,8 @@ class EvaluatorTest {
         val deg = Calculator(AngleMode.DEGREES)
         assertEquals(1.0, deg.evaluate("sin(90)"), 1e-9)
     }
+
+    @Test fun permutationOperator() = assertEquals(20.0, calc.evaluate("5P2"), 1e-9)
+    @Test fun combinationOperator() = assertEquals(10.0, calc.evaluate("5C2"), 1e-9)
+    @Test fun permutationBindsTighterThanPlus() = assertEquals(22.0, calc.evaluate("2+5P2"), 1e-9)
 }

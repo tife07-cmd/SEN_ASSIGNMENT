@@ -4,8 +4,9 @@ class ShuntingYard {
 
     // unary minus binds looser than ^ so -3^2 evaluates to -(3^2)
     private fun precedence(t: Token): Int = when {
-        t.type == TokenType.UNARY -> 3
+        t.text == "P" || t.text == "C" -> 5
         t.text == "^" -> 4
+        t.type == TokenType.UNARY -> 3
         t.text == "*" || t.text == "/" -> 2
         t.text == "+" || t.text == "-" -> 1
         else -> 0

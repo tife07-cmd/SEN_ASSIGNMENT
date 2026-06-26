@@ -42,6 +42,8 @@
     <string name="btn_close_brac">)</string>
     <string name="btn_deg">DEG</string>
     <string name="btn_rad">RAD</string>
+    <string name="btn_perm">P</string>
+    <string name="btn_comb">C</string>
 
     <string name="error_msg">Error</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
