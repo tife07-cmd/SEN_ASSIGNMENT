@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Tife ScienticCalculator</string>
+    <string name="btn_0">0</string>
+    <string name="btn_1">1</string>
+    <string name="btn_2">2</string>
+    <string name="btn_3">3</string>
+    <string name="btn_4">4</string>
+    <string name="btn_5">5</string>
+    <string name="btn_6">6</string>
+    <string name="btn_7">7</string>
+    <string name="btn_8">8</string>
+    <string name="btn_9">9</string>
+    <string name="btn_dot">.</string>
+    <string name="btn_add">+</string>
+    <string name="btn_sub">−</string>
+    <string name="btn_mul">×</string>
+    <string name="btn_div">÷</string>
+    <string name="btn_equal">=</string>
+    <string name="btn_ac">AC</string>
+    <string name="btn_del">DEL</string>
+    <string name="btn_sin">sin</string>
+    <string name="btn_cos">cos</string>
+    <string name="btn_tan">tan</string>
+    <string name="btn_sinh">sinh</string>
+    <string name="btn_cosh">cosh</string>
+    <string name="btn_log">log</string>
+    <string name="btn_ln">ln</string>
+    <string name="btn_sqrt">√</string>
+    <string name="btn_power">^</string>
+    <string name="btn_fact">x!</string>
+    <string name="btn_ncr">nCr</string>
+    <string name="btn_npr">nPr</string>
+    <string name="btn_open_brac">(</string>
+    <string name="btn_close_brac">)</string>
+    <string name="title_scientific">Scientific</string>
+    <string name="desc_theme_toggle">Toggle dark mode</string>
+    <string name="evaluating_prefix">Evaluating: </string>
+    <string name="error_msg">Error</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_basic">Basic Calculator</string>
+    <string name="nav_matrix">Matrix</string>
+    <string name="nav_combinatorics">Combinatorics</string>
+    <string name="nav_statistics">Statistics</string>
+</resources>
